@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Future</title>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body style="background-color: lightgreen;">
+
+        <h1 id="heading" style="font-size: 100px;">THIS IS THE HEADING</h1><br>
+        <button onclick="choose_ex();">EXERCISE</button>
+        <button onclick="motivate();">MOTIVATION</button>
+
+
+
+
+        <script> 
+        var array =  ["leg raises", "russian twists", "calf raises", "heel touches", "clockfoot", "plank", "jump", "lunges", "squat", "bulgarian"];
+        var nums = [10,15,20,25,30,35,40,45,50,60]
+        function choose_ex(){
+            var a = getRandomInt(0, array.length-1);
+            var f = array[a];
+            var b = getRandomInt(0, nums.length-1);
+            var num = nums[b];
+            document.getElementById("heading").innerHTML = f + ":" + num;
+            console.log(a);
+            console.log(b);
+        }
+        console.log("hello world");
+        
+        function motivate(){
+            var array = ["carpe diem","carpe noctem","do this for her","dead poets society", "only 2 more minutes", "the lakes", "leo fitz", "dark academia", "remus lupin", "she'll want you"]
+            var a = getRandomInt(0, array.length-1);
+            document.getElementById("heading").innerHTML = array[a];
+        
+        }
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        </script>
+
+    </body>
+</html>
