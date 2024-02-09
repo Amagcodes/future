@@ -3,34 +3,125 @@
     <head>
         <title>Future</title>
         <meta name="viewport" content="width=device-width">
+        <href link="style.css" rel="stylesheet">
     </head>
-    <body style="background-color: lightgreen;">
 
-        <h1 id="heading" style="font-size: 100px;">THIS IS THE HEADING</h1><br>
+    <body style="background-color: lightgreen;">
+        <h1 id="heading"></h1>
         <button onclick="choose_ex();">EXERCISE</button>
         <button onclick="motivate();">MOTIVATION</button>
 
+        <div id="picture" style=" float:right; height:50%; width: 50%;"></div>
 
 
 
         <script> 
-        var array =  ["leg raises", "russian twists", "calf raises", "heel touches", "clockfoot", "plank", "jump", "lunges", "squat", "bulgarian"];
-        var nums = [10,15,20,25,30,35,40,45,50,60]
         function choose_ex(){
+            var array =  ["leg raises", "russian twists", "calf raises", "heel touches", "clockfoot", "plank", "jump", "lunges", "squat", "bulgarian"];
+            var nums = [10,15,20,25,30,35,40,45,50,60]
             var a = getRandomInt(0, array.length-1);
             var f = array[a];
             var b = getRandomInt(0, nums.length-1);
             var num = nums[b];
             document.getElementById("heading").innerHTML = f + ":" + num;
-            console.log(a);
-            console.log(b);
+            
         }
-        console.log("hello world");
+        
         
         function motivate(){
-            var array = ["charlie spring", "tori spring", "jess mariano", "gay","dostoevsky", "latin", "the secret history", "if we were villains", "emily dickinson", "the perks of being a wallflower", "memento vivere", "the maurauders","carpe diem","carpe noctem","do this for her","dead poets society", "only 2 more minutes", "the lakes", "leo fitz", "dark academia", "remus lupin", "she'll want you"]
+            //current length-23
+            var array = ["tragedy","poetry","charlie spring", "tori spring", "jess mariano", "gay","dostoevsky", "latin", "the secret history", "if we were villains", "emily dickinson", "the perks of being a wallflower", "memento vivere", "the maurauders","carpe diem","carpe noctem","literature","dead poets society", "physics", "the lakes", "leo fitz", "dark academia", "remus lupin", "love = death"]
             var a = getRandomInt(0, array.length-1);
-            document.getElementById("heading").innerHTML = array[a];
+            
+            if(array[a]=="remus lupin"){
+                document.getElementById("picture").innerHTML = '<img src="remus.jpeg" alt="Remus Lupin">';
+            }
+            else if(array[a]=="charlie spring"){
+                document.getElementById("picture").innerHTML = '<img src="charlie.jpeg" alt="Charlie Spring">';
+            }
+            else if(array[a]=="tori spring"){
+                document.getElementById("picture").innerHTML = '<img src="tori.jpeg" alt="Tori Spring">';
+            }
+            else if(array[a]=="jess mariano"){
+                document.getElementById("picture").innerHTML = '<img src="jess.jpeg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="doestoevsky"){
+                document.getElementById("picture").innerHTML = '<img src="dos.jpg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="the lakes"){
+                document.getElementById("picture").innerHTML = '<img src="folklore.jpeg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="emily dickinson"){
+                document.getElementById("picture").innerHTML = '<img src="emily.jpg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="dark academia"){
+                document.getElementById("picture").innerHTML = '<img src="dark.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="leo fitz"){
+                document.getElementById("picture").innerHTML = '<img src="leo.jpg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="dead poets society"){
+                document.getElementById("picture").innerHTML = '<img src="dead.jpg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="the perks of being a wallflower"){
+                document.getElementById("picture").innerHTML = '<img src="wallflower.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="the secret history"){
+                document.getElementById("picture").innerHTML = '<img src="secret.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="if we were villians"){
+                document.getElementById("picture").innerHTML = '<img src="villains.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="carpe diem"){
+                document.getElementById("picture").innerHTML = '<img src="diem.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="carpe noctem"){
+                document.getElementById("picture").innerHTML = '<img src="noctem.jpg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="the maurauders"){
+                document.getElementById("picture").innerHTML = '<img src="maurauders.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="memento vivere"){
+                document.getElementById("picture").innerHTML = '<img src="vivere.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="poetry"){
+                document.getElementById("picture").innerHTML = '<img src="poetry.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="gay"){
+                document.getElementById("picture").innerHTML = '<img src="gay.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="latin"){
+                document.getElementById("picture").innerHTML = '<img src="latin.jpg" alt="Jess Mariano">';
+            }
+
+            else if(array[a]=="love = death"){
+                document.getElementById("picture").innerHTML = '<img src="want.jpg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="literature"){
+                document.getElementById("picture").innerHTML = '<img src="lit.jpg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="physics"){
+                document.getElementById("picture").innerHTML = '<img src="physics.jpg" alt="Jess Mariano">';
+            }
+            else if(array[a]=="tragedy"){
+                document.getElementById("picture").innerHTML = '<img src="tragedy.jpg" alt="Jess Mariano">';
+            }
+
+            
+            
+
+            
+            
         
         }
 
